@@ -8,24 +8,41 @@ composer require beeproger/rocketchat-monolog-handler
 ```
 
 ## Usage
-Add the following code to your logging.php in the config folder.  
+Add the following line to the imports part of logging.php  
+```php
+use Beeproger\Logging\RocketChatHandler;
+```
+Add the following code to channels in logging.php in the config folder.  
 ```php
     'rocketchat' => [
         'driver' => 'custom',
         'via' => RocketChatHandler::class,
         'url' => env('LOG_ROCKETCHAT_WEBHOOK_URL', ''),
-        'channel' => '#general',
+        'channel' => env('LOG_ROCKETCHAT_CHANNEL', ''),
     ],
 ```
-Add the following line to the imports part of logging.php  
+update the 'stack' channel from:
+```php
+'channels'          => ['daily'],
 ```
-use Beeproger\Logging\RocketChatHandler;
+to 
+```php
+'channels'          => ['daily', 'rocketchat'],
 ```
 
-add LOG_ROCKETCHAT_WEBHOOK_URL to your .env file.  
-See [this link](https://rocket.chat/docs/administrator-guides/integrations/) to create a webhook.  
 
-The username and channel config keys can be set to any channel and username you please.
+Add the following to your .env file:
+
+```
+LOG_ROCKETCHAT_WEBHOOK_URL=
+LOG_ROCKETCHAT_CHANNEL=
+```
+
+And done!
+
+-----
+See [this link](https://rocket.chat/docs/administrator-guides/integrations/) on how to create a webhook.  
+
 
 ## License
 
