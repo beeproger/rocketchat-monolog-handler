@@ -1,10 +1,10 @@
 <?php
 
-namespace Beeproger\Logging\RocketChatHandler;
+namespace Beeproger\Logging;
 
-use Beeproger\Logging\RocketChatHandler\RocketChat\RocketChatWebhookHandler;
-use Illuminate\Log\ParsesLogConfiguration;
 use Monolog\Logger;
+use Illuminate\Log\ParsesLogConfiguration;
+use Beeproger\Logging\RocketChat\RocketChatWebhookHandler;
 
 class RocketChatHandler
 {
@@ -29,7 +29,8 @@ class RocketChatHandler
         return $logger;
     }
 
-    public function getFallbackChannelName() {
-        return '@martijn.wagena';
+    public function getFallbackChannelName()
+    {
+        return '#general';
     }
 }

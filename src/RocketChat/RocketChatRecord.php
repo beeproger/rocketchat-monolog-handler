@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 /*
- * This file is part of the Monolog package.
+ * This file is inspired by the original file SlackRecord of the Monolog package.
  *
  * (c) Jordi Boggiano <j.boggiano@seld.be>
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Beeproger\Logging\RocketChatHandler\RocketChat;
+namespace Beeproger\Logging\RocketChat;
 
 use Monolog\Logger;
-use Monolog\Formatter\NormalizerFormatter;
 use Monolog\Formatter\FormatterInterface;
+use Monolog\Formatter\NormalizerFormatter;
 
 
 class RocketChatRecord

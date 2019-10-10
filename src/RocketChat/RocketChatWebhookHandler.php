@@ -1,16 +1,16 @@
 <?php declare(strict_types=1);
 
-namespace Beeproger\Logging\RocketChatHandler\RocketChat;
+namespace Beeproger\Logging\RocketChat;
 
+use Monolog\Logger;
+use GuzzleHttp\Client;
+use Monolog\Handler\HandlerInterface;
 use Monolog\Formatter\FormatterInterface;
 use Monolog\Handler\AbstractProcessingHandler;
-use Monolog\Handler\HandlerInterface;
-use Monolog\Logger;
-use App\Logging\RocketChat\RocketChatRecord;
-use GuzzleHttp\Client;
+use Beeproger\Logging\RocketChat\RocketChatRecord;
 
 /**
- * Sends notifications through RocketChat Webhooks
+ * Sends notifications through Rocket.Chat Webhooks
  *
  * @author Martijn Wagena <martijn.wagena@beeproger.com>
  * @see    https://rocket.chat/docs/administrator-guides/integrations/
@@ -18,7 +18,7 @@ use GuzzleHttp\Client;
 class RocketChatWebhookHandler extends AbstractProcessingHandler
 {
     /**
-     * RocketChat Webhook token
+     * Rocket.Chat Webhook token
      * @var string
      */
     private $webhookUrl;
