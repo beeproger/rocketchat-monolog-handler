@@ -1,0 +1,25 @@
+{
+    "name": "beeproger/rocketchat-monolog-handler",
+    "description": "",
+    "license": "MIT",
+    "homepage": "https://github.com/beeproger/rocketchat-monolog-handler",
+    "authors": [
+        {
+            "name": "Martijn Wagena",
+            "email": "martijn.wagena@beeproger.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Beeproger\\Logging\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {}
+    },
+    "require": {
+        "php": "^7.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "illuminate/log": "~5.8.0|^6.0"
+    }
+}
