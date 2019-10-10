@@ -4,7 +4,7 @@ namespace Beeproger\Logging;
 
 use Monolog\Logger;
 use Illuminate\Log\ParsesLogConfiguration;
-use Beeproger\Logging\RocketChat\RocketChatWebhookHandler;
+use Monolog\Handler\SlackWebhookHandler;
 
 class RocketChatHandler
 {
@@ -13,7 +13,7 @@ class RocketChatHandler
     public function __invoke(array $config)
     {
         $logger = new Logger('rocketchat');
-        $logger->pushHandler(new RocketChatWebhookHandler(
+        $logger->pushHandler(new SlackWebhookHandler(
             $config['url'],
             $config['channel'] ?? null,
             $config['username'] ?? 'Laravel',
