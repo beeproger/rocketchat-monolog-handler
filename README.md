@@ -13,7 +13,7 @@ Add the following code to your logging.php in the config folder.
     'rocketchat' => [
         'driver' => 'custom',
         'via' => RocketChatHandler::class,
-        'url' => env('ROCKETCHAT_LOGGING_WEBHOOK', ''),
+        'url' => env('LOG_ROCKETCHAT_WEBHOOK_URL', ''),
         'channel' => '#general',
         'username' => 'Rocket.Chat',
     ],
@@ -23,7 +23,7 @@ Add the following line to the imports part of logging.php
 use Beeproger\Logging\RocketChatHandler;
 ```
 
-add ROCKETCHAT_LOGGING_WEBHOOK to your .env file.  
+add LOG_ROCKETCHAT_WEBHOOK_URL to your .env file.  
 See [this link](https://rocket.chat/docs/administrator-guides/integrations/) to create a webhook.  
 
 The username and channel config keys can be set to any channel and username you please.
