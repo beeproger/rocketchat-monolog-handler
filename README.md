@@ -15,7 +15,6 @@ Add the following code to your logging.php in the config folder.
         'via' => RocketChatHandler::class,
         'url' => env('LOG_ROCKETCHAT_WEBHOOK_URL', ''),
         'channel' => '#general',
-        'username' => 'Rocket.Chat',
     ],
 ```
 Add the following line to the imports part of logging.php  
