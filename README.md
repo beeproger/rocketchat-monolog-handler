@@ -41,7 +41,10 @@ LOG_ROCKETCHAT_CHANNEL=
 And done!
 
 -----
-See [this link](https://rocket.chat/docs/administrator-guides/integrations/) on how to create a webhook.  
+FAQ:
+
+- [How to create a webhook](https://rocket.chat/docs/administrator-guides/integrations/).
+- When using spaces in channel names like: 'This Channel' make sure to use the lowecase, kebab variant: 'this-channel' in the 'channel' value in your configuration.
 
 
 ## License
